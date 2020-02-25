@@ -18,10 +18,16 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XZY-yg-3Eb">
                                 <rect key="frame" x="10" y="822" width="124.5" height="30"/>
                                 <state key="normal" title="Init"/>
+                                <connections>
+                                    <action selector="handleInit:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Tra-HN-5RB"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="V0U-Sy-bEP">
                                 <rect key="frame" x="144.5" y="822" width="125" height="30"/>
                                 <state key="normal" title="RPC"/>
+                                <connections>
+                                    <action selector="handleRpc:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Mgm-Ck-YAy"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qup-xH-DO2">
                                 <rect key="frame" x="279.5" y="822" width="124.5" height="30"/>
