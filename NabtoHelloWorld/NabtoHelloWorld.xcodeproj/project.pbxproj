@@ -1,0 +1,414 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		147149C6A62F562C35CA0A18 /* Pods_NabtoHelloWorld.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4784DC9E86BDF1E545723A26 /* Pods_NabtoHelloWorld.framework */; };
+		D4E90682240402E30025FEF9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4E90681240402E30025FEF9 /* AppDelegate.swift */; };
+		D4E90684240402E30025FEF9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4E90683240402E30025FEF9 /* SceneDelegate.swift */; };
+		D4E90686240402E30025FEF9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4E90685240402E30025FEF9 /* ViewController.swift */; };
+		D4E90689240402E30025FEF9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D4E90687240402E30025FEF9 /* Main.storyboard */; };
+		D4E9068B240402E40025FEF9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D4E9068A240402E40025FEF9 /* Assets.xcassets */; };
+		D4E9068E240402E40025FEF9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D4E9068C240402E40025FEF9 /* LaunchScreen.storyboard */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		0AE236B6F50BC6C0E4CB832F /* Pods-NabtoHelloWorld.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NabtoHelloWorld.debug.xcconfig"; path = "Target Support Files/Pods-NabtoHelloWorld/Pods-NabtoHelloWorld.debug.xcconfig"; sourceTree = "<group>"; };
+		4784DC9E86BDF1E545723A26 /* Pods_NabtoHelloWorld.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NabtoHelloWorld.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		58843707109DE08E0B953761 /* Pods-NabtoHelloWorld.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NabtoHelloWorld.release.xcconfig"; path = "Target Support Files/Pods-NabtoHelloWorld/Pods-NabtoHelloWorld.release.xcconfig"; sourceTree = "<group>"; };
+		D4E9067E240402E30025FEF9 /* NabtoHelloWorld.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NabtoHelloWorld.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		D4E90681240402E30025FEF9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		D4E90683240402E30025FEF9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		D4E90685240402E30025FEF9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		D4E90688240402E30025FEF9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		D4E9068A240402E40025FEF9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		D4E9068D240402E40025FEF9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		D4E9068F240402E40025FEF9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		D4E9067B240402E30025FEF9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				147149C6A62F562C35CA0A18 /* Pods_NabtoHelloWorld.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		3DE4B9A24328EA4BAA0FEF0C /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				0AE236B6F50BC6C0E4CB832F /* Pods-NabtoHelloWorld.debug.xcconfig */,
+				58843707109DE08E0B953761 /* Pods-NabtoHelloWorld.release.xcconfig */,
+			);
+			name = Pods;
+			path = ../Pods;
+			sourceTree = "<group>";
+		};
+		D4E90675240402E30025FEF9 = {
+			isa = PBXGroup;
+			children = (
+				D4E90680240402E30025FEF9 /* NabtoHelloWorld */,
+				D4E9067F240402E30025FEF9 /* Products */,
+				3DE4B9A24328EA4BAA0FEF0C /* Pods */,
+				E06A8BDAE61D68606111CDEE /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		D4E9067F240402E30025FEF9 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D4E9067E240402E30025FEF9 /* NabtoHelloWorld.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		D4E90680240402E30025FEF9 /* NabtoHelloWorld */ = {
+			isa = PBXGroup;
+			children = (
+				D4E90681240402E30025FEF9 /* AppDelegate.swift */,
+				D4E90683240402E30025FEF9 /* SceneDelegate.swift */,
+				D4E90685240402E30025FEF9 /* ViewController.swift */,
+				D4E90687240402E30025FEF9 /* Main.storyboard */,
+				D4E9068A240402E40025FEF9 /* Assets.xcassets */,
+				D4E9068C240402E40025FEF9 /* LaunchScreen.storyboard */,
+				D4E9068F240402E40025FEF9 /* Info.plist */,
+			);
+			path = NabtoHelloWorld;
+			sourceTree = "<group>";
+		};
+		E06A8BDAE61D68606111CDEE /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4784DC9E86BDF1E545723A26 /* Pods_NabtoHelloWorld.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		D4E9067D240402E30025FEF9 /* NabtoHelloWorld */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D4E90692240402E40025FEF9 /* Build configuration list for PBXNativeTarget "NabtoHelloWorld" */;
+			buildPhases = (
+				3011F2E6DF8A9D6AEB35263C /* [CP] Check Pods Manifest.lock */,
+				D4E9067A240402E30025FEF9 /* Sources */,
+				D4E9067B240402E30025FEF9 /* Frameworks */,
+				D4E9067C240402E30025FEF9 /* Resources */,
+				D5E1BD66469E15B05F8B7836 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = NabtoHelloWorld;
+			productName = NabtoHelloWorld;
+			productReference = D4E9067E240402E30025FEF9 /* NabtoHelloWorld.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D4E90676240402E30025FEF9 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1120;
+				LastUpgradeCheck = 1120;
+				ORGANIZATIONNAME = Nabto;
+				TargetAttributes = {
+					D4E9067D240402E30025FEF9 = {
+						CreatedOnToolsVersion = 11.2.1;
+					};
+				};
+			};
+			buildConfigurationList = D4E90679240402E30025FEF9 /* Build configuration list for PBXProject "NabtoHelloWorld" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = D4E90675240402E30025FEF9;
+			productRefGroup = D4E9067F240402E30025FEF9 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D4E9067D240402E30025FEF9 /* NabtoHelloWorld */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		D4E9067C240402E30025FEF9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D4E9068E240402E40025FEF9 /* LaunchScreen.storyboard in Resources */,
+				D4E9068B240402E40025FEF9 /* Assets.xcassets in Resources */,
+				D4E90689240402E30025FEF9 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		3011F2E6DF8A9D6AEB35263C /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-NabtoHelloWorld-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D5E1BD66469E15B05F8B7836 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-NabtoHelloWorld/Pods-NabtoHelloWorld-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-NabtoHelloWorld/Pods-NabtoHelloWorld-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-NabtoHelloWorld/Pods-NabtoHelloWorld-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		D4E9067A240402E30025FEF9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D4E90686240402E30025FEF9 /* ViewController.swift in Sources */,
+				D4E90682240402E30025FEF9 /* AppDelegate.swift in Sources */,
+				D4E90684240402E30025FEF9 /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		D4E90687240402E30025FEF9 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D4E90688240402E30025FEF9 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		D4E9068C240402E40025FEF9 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D4E9068D240402E40025FEF9 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		D4E90690240402E40025FEF9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		D4E90691240402E40025FEF9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		D4E90693240402E40025FEF9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0AE236B6F50BC6C0E4CB832F /* Pods-NabtoHelloWorld.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = E55K8RCV2E;
+				INFOPLIST_FILE = NabtoHelloWorld/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.nabto.NabtoHelloWorld;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		D4E90694240402E40025FEF9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 58843707109DE08E0B953761 /* Pods-NabtoHelloWorld.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = E55K8RCV2E;
+				INFOPLIST_FILE = NabtoHelloWorld/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.nabto.NabtoHelloWorld;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		D4E90679240402E30025FEF9 /* Build configuration list for PBXProject "NabtoHelloWorld" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D4E90690240402E40025FEF9 /* Debug */,
+				D4E90691240402E40025FEF9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D4E90692240402E40025FEF9 /* Build configuration list for PBXNativeTarget "NabtoHelloWorld" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D4E90693240402E40025FEF9 /* Debug */,
+				D4E90694240402E40025FEF9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D4E90676240402E30025FEF9 /* Project object */;
+}
