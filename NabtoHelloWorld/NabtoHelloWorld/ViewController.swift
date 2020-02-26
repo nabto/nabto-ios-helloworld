@@ -28,10 +28,12 @@ class ViewController: UIViewController {
     @IBOutlet weak var textView: UITextView!
     
     @IBAction func handleInit(_ sender: Any) {
-        do {
-            try nabtoInit()
-        } catch let error as NSError {
-            appendError(error)
+        DispatchQueue.global(qos: .userInitiated).async {
+            do {
+                try self.nabtoInit()
+            } catch let error as NSError {
+                self.appendError(error)
+            }
         }
     }
 
@@ -40,61 +42,50 @@ class ViewController: UIViewController {
             do {
                 try self.nabtoRpc()
             } catch let error as NSError {
-                self.bgAppendError(error)
+                self.appendError(error)
             }
         }
     }
     
     func append(_ text: String) {
-        self.textView.text.append("\(text)\n")
-    }
-
-    func bgAppend(_ text: String) {
         DispatchQueue.main.async {
-            self.append(text)
+            self.textView.text.append("\(text)\n")
         }
     }
 
     func appendOk(_ text: String) {
         self.append("\(text) completed OK")
     }
-
-    func bgAppendOk(_ text: String) {
-        DispatchQueue.main.async {
-            self.appendOk(text)
-        }
-    }
     
     func appendError(_ error: NSError) {
-        append("ERROR: API call returned \(error.code): \(error.domain)")
-    }
-    
-    func bgAppendError(_ error: NSError) {
-        DispatchQueue.main.async {
-            self.appendError(error)
-        }
+        self.append("ERROR: API call returned \(error.code): \(error.domain)")
     }
     
     func nabtoInit() throws {
-        self.textView.text = ""
+        DispatchQueue.main.async {
+            self.textView.text = ""
+        }
+        
+        let version = nabto.nabtoVersionString()!
+        append("Nabto available: SDK version \(version)")
 
         var status: NabtoClientStatus = nabto.nabtoStartup()
         if (status == NabtoClientStatus.NCS_OK) {
-            appendOk("nabtoStartup")
+            self.appendOk("nabtoStartup")
         } else {
             throw NSError(domain: "Startup failed", code: status.rawValue)
         }
         
         status = nabto.nabtoCreateSelfSignedProfile(self.userId, withPassword: self.password)
         if (status == NabtoClientStatus.NCS_OK) {
-            appendOk("nabtoCreateSelfSignedProfile")
+            self.appendOk("nabtoCreateSelfSignedProfile")
         } else {
             throw NSError(domain: "nabtoCreateSelfSignedProfile failed", code: status.rawValue)
         }
         
         status = nabto.nabtoOpenSession(self.userId, withPassword: self.password)
         if (status == NabtoClientStatus.NCS_OK) {
-            appendOk("nabtoOpenSession")
+            self.appendOk("nabtoOpenSession")
         } else {
             throw NSError(domain: "nabtoOpenSession failed", code: status.rawValue)
         }
@@ -104,7 +95,7 @@ class ViewController: UIViewController {
         var buffer: UnsafeMutablePointer<Int8>? = nil
         var status: NabtoClientStatus = nabto.nabtoRpcSetDefaultInterface(rpcInterface, withErrorMessage: &buffer)
         if (status == NabtoClientStatus.NCS_OK) {
-            bgAppendOk("nabtoRpcSetDefaultInterface")
+            self.appendOk("nabtoRpcSetDefaultInterface")
         } else if (status == NabtoClientStatus.NCS_FAILED_WITH_JSON_MESSAGE) {
             throw NSError(domain: "nabtoRpcSetDefaultInterface failed: \n" + String(cString: buffer!), code: status.rawValue)
         } else {
@@ -113,8 +104,8 @@ class ViewController: UIViewController {
         
         status = nabto.nabtoRpcInvoke("nabto://\(self.rpcDevice)/wind_speed.json?", withResultBuffer: &buffer)
         if (status == NabtoClientStatus.NCS_OK) {
-            bgAppendOk("nabtoRpcInvoke")
-            bgAppend(String(cString: buffer!))
+            self.appendOk("nabtoRpcInvoke")
+            self.append(String(cString: buffer!))
         } else if (status == NabtoClientStatus.NCS_FAILED_WITH_JSON_MESSAGE) {
             throw NSError(domain: "nabtoRpcInvoke failed: \n" + String(cString: buffer!), code: status.rawValue)
         } else {
@@ -124,8 +115,6 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        let version = nabto.nabtoVersionString()!
-        append("Nabto available: SDK version \(version)")
     }
 
 
