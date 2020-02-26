@@ -40,7 +40,17 @@ class ViewController: UIViewController {
     @IBAction func handleRpc(_ sender: Any) {
         DispatchQueue.global(qos: .userInitiated).async {
             do {
-                try self.nabtoRpc()
+                try self.nabtoInvokeRpc()
+            } catch let error as NSError {
+                self.appendError(error)
+            }
+        }
+    }
+
+    @IBAction func handleTunnel(_ sender: Any) {
+        DispatchQueue.global(qos: .userInitiated).async {
+            do {
+                try self.nabtoOpenTunnel()
             } catch let error as NSError {
                 self.appendError(error)
             }
@@ -54,11 +64,12 @@ class ViewController: UIViewController {
     }
 
     func appendOk(_ text: String) {
-        self.append("\(text) completed OK")
+        self.append("OK \(text)")
     }
     
     func appendError(_ error: NSError) {
-        self.append("ERROR: API call returned \(error.code): \(error.domain)")
+        let status: NabtoClientStatus = NabtoClientStatus(rawValue: error.code)!
+        self.append("ERROR - \(error.domain): API call returned \(error.code) \"\(NabtoClient.nabtoStatusString(status)!)\"")
     }
     
     func nabtoInit() throws {
@@ -73,9 +84,9 @@ class ViewController: UIViewController {
         if (status == NabtoClientStatus.NCS_OK) {
             self.appendOk("nabtoStartup")
         } else {
-            throw NSError(domain: "Startup failed", code: status.rawValue)
+            throw NSError(domain: "nabtoStartup failed", code: status.rawValue)
         }
-        
+
         status = nabto.nabtoCreateSelfSignedProfile(self.userId, withPassword: self.password)
         if (status == NabtoClientStatus.NCS_OK) {
             self.appendOk("nabtoCreateSelfSignedProfile")
@@ -91,7 +102,7 @@ class ViewController: UIViewController {
         }
     }
 
-    func nabtoRpc() throws {
+    func nabtoInvokeRpc() throws {
         var buffer: UnsafeMutablePointer<Int8>? = nil
         var status: NabtoClientStatus = nabto.nabtoRpcSetDefaultInterface(rpcInterface, withErrorMessage: &buffer)
         if (status == NabtoClientStatus.NCS_OK) {
@@ -112,7 +123,44 @@ class ViewController: UIViewController {
             throw NSError(domain: "nabtoRpcInvoke failed", code: status.rawValue)
         }
     }
+    
+    func nabtoOpenTunnel() throws {
+        var tunnel: NabtoTunnelHandle?
+        
+        var status = nabto.nabtoTunnelOpenTcp(&tunnel, toHost: self.tunnelDevice, onPort: 80)
+        if (status == NabtoClientStatus.NCS_OK) {
+            self.appendOk("nabtoTunnelOpenTcp")
+        } else {
+            throw NSError(domain: "nabtoTunnelOpenTcp failed", code: status.rawValue)
+        }
+        
+        var state: NabtoTunnelState = NabtoTunnelState.NTS_CLOSED
+        status = nabto.nabtoTunnelWait(tunnel, pollPeriodMillis: 10, timeoutMillis: 5000, resultingState: &state);
+        if (status == NabtoClientStatus.NCS_OK) {
+            self.append("OK nabtoTunnelWait - connection: " + NabtoClient.nabtoTunnelInfoString(state))
+        } else {
+            throw NSError(domain: "nabtoTunnelOpenTcp failed", code: status.rawValue)
+        }
+        
+        if (state != NabtoTunnelState.NTS_CLOSED) {
+            let port = nabto.nabtoTunnelPort(tunnel)
+            self.performHttpRequest(port)
+        }
+    }
 
+    func performHttpRequest(_ port: Int32) {
+        let url = URL(string: "http://127.0.0.1:\(port)/")
+        let task = URLSession.shared.dataTask(with: url!) { (data, response, error) in
+            if error == nil {
+                self.appendOk("HTTP request on tunnel")
+                self.append(String(data: data!, encoding: String.Encoding.utf8) ?? "")
+            } else {
+                self.append("ERROR - HTTP request failed: " + error!.localizedDescription)
+            }
+        }
+        task.resume()
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
     }

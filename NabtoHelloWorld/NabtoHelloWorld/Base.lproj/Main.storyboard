@@ -32,6 +32,9 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qup-xH-DO2">
                                 <rect key="frame" x="279.5" y="822" width="124.5" height="30"/>
                                 <state key="normal" title="Tunnel"/>
+                                <connections>
+                                    <action selector="handleTunnel:" destination="BYZ-38-t0r" eventType="touchUpInside" id="bgR-zQ-YRI"/>
+                                </connections>
                             </button>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="Hello, Nabto!" translatesAutoresizingMaskIntoConstraints="NO" id="zzp-Ve-LeB">
                                 <rect key="frame" x="0.0" y="35" width="414" height="766"/>
