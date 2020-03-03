@@ -36,6 +36,17 @@ class ViewController: UIViewController {
             }
         }
     }
+    
+    @IBAction func handleStop(_ sender: Any) {
+        DispatchQueue.global(qos: .userInitiated).async {
+            do {
+                try self.nabtoStop()
+            } catch let error as NSError {
+                self.appendError(error)
+            }
+        }
+    }
+    
 
     @IBAction func handleRpc(_ sender: Any) {
         DispatchQueue.global(qos: .userInitiated).async {
@@ -99,6 +110,15 @@ class ViewController: UIViewController {
             self.appendOk("nabtoOpenSession")
         } else {
             throw NSError(domain: "nabtoOpenSession failed", code: status.rawValue)
+        }
+    }
+    
+    func nabtoStop() throws {
+        let status: NabtoClientStatus = nabto.nabtoCloseSession()
+        if (status == NabtoClientStatus.NCS_OK) {
+            self.appendOk("nabtoCloseSession")
+        } else {
+            throw NSError(domain: "nabtoCloseSession failed", code: status.rawValue)
         }
     }
 
