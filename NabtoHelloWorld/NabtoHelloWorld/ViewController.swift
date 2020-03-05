@@ -179,12 +179,6 @@ class ViewController: UIViewController {
             }
         }
         task.resume()
-    }
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-    }
-
-
+    }    
 }
 
