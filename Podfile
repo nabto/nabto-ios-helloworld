@@ -1,9 +1,11 @@
+source 'https://github.com/CocoaPods/Specs.git'
+
 project 'NabtoHelloWorld/NabtoHelloWorld.xcodeproj/'
 
-platform :ios, '11.0'
+platform :ios, '14.5'
 
 target 'NabtoHelloWorld' do
   use_frameworks!
-  pod 'NabtoClient', '~>5.1.1'
+  pod 'NabtoClient', '~>7.3.0-rc3'
 end
 

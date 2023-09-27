@@ -88,6 +88,15 @@ class ViewController: UIViewController {
             self.textView.text = ""
         }
         
+//        let docsPath = NSSearchPathForDirectoriesInDomains(
+//            FileManager.SearchPathDirectory.documentDirectory,
+//            FileManager.SearchPathDomainMask.userDomainMask,
+//          true)[0]
+//        let filePath = docsPath.appending("/nabto/nabto_config.ini")
+//        let content = "logSetting=*.all"
+//        print("*** trying to write to: \(filePath)")
+//        try content.write(toFile: filePath, atomically: false, encoding: String.Encoding.utf8)
+        
         let version = nabto.nabtoVersionString()!
         append("Nabto available: SDK version \(version)")
 
@@ -106,10 +115,18 @@ class ViewController: UIViewController {
         }
         
         status = nabto.nabtoOpenSession(self.userId, withPassword: self.password)
+//        status = nabto.nabtoOpenSession("guest", withPassword: "")
         if (status == NabtoClientStatus.NCS_OK) {
             self.appendOk("nabtoOpenSession")
         } else {
             throw NSError(domain: "nabtoOpenSession failed", code: status.rawValue)
+        }
+        
+        if let devices = nabto.nabtoGetLocalDevices() {
+            self.append("Found \(devices.count) devices:")
+            for device in devices {
+                self.append(" * \(device)")
+            }
         }
     }
     

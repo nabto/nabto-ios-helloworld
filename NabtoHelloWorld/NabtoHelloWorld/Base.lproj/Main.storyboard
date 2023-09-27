@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15509"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -15,35 +17,35 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XZY-yg-3Eb">
-                                <rect key="frame" x="10" y="822" width="124.5" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XZY-yg-3Eb">
+                                <rect key="frame" x="10.5" y="822" width="124.5" height="30"/>
                                 <state key="normal" title="Init"/>
                                 <connections>
                                     <action selector="handleInit:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Tra-HN-5RB"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="V0U-Sy-bEP">
-                                <rect key="frame" x="175" y="822" width="124.5" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="V0U-Sy-bEP">
+                                <rect key="frame" x="175.5" y="822" width="124.5" height="30"/>
                                 <state key="normal" title="RPC"/>
                                 <connections>
                                     <action selector="handleRpc:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Mgm-Ck-YAy"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qup-xH-DO2">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qup-xH-DO2">
                                 <rect key="frame" x="279.5" y="822" width="124.5" height="30"/>
                                 <state key="normal" title="Tunnel"/>
                                 <connections>
                                     <action selector="handleTunnel:" destination="BYZ-38-t0r" eventType="touchUpInside" id="bgR-zQ-YRI"/>
                                 </connections>
                             </button>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="Hello, Nabto!" translatesAutoresizingMaskIntoConstraints="NO" id="zzp-Ve-LeB">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="Start with init, then try RPC or tunnel!" translatesAutoresizingMaskIntoConstraints="NO" id="zzp-Ve-LeB">
                                 <rect key="frame" x="0.0" y="35" width="414" height="766"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                                <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <color key="textColor" systemColor="labelColor"/>
                                 <fontDescription key="fontDescription" name="Courier" family="Courier" pointSize="12"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oV1-73-Z9b">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oV1-73-Z9b">
                                 <rect key="frame" x="102" y="822" width="124.5" height="30"/>
                                 <state key="normal" title="Stop"/>
                                 <connections>
@@ -51,16 +53,17 @@
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="V0U-Sy-bEP" firstAttribute="leading" secondItem="XZY-yg-3Eb" secondAttribute="trailing" constant="40.5" id="3Hp-If-gT5"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="V0U-Sy-bEP" secondAttribute="bottom" constant="10" id="7oo-hd-BEF"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="oV1-73-Z9b" secondAttribute="bottom" constant="10" id="KaY-0r-2ey"/>
                             <constraint firstItem="zzp-Ve-LeB" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="N8K-rH-5Sz"/>
+                            <constraint firstItem="XZY-yg-3Eb" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10.5" id="PuM-Ii-7an"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="V0U-Sy-bEP" secondAttribute="trailing" constant="114" id="QQr-RO-CTa"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Qup-xH-DO2" secondAttribute="trailing" constant="10" id="Quc-Is-qLM"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Qup-xH-DO2" secondAttribute="bottom" constant="10" id="RKK-VA-k3z"/>
-                            <constraint firstItem="XZY-yg-3Eb" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="T4G-Y5-UDt"/>
                             <constraint firstItem="XZY-yg-3Eb" firstAttribute="top" secondItem="zzp-Ve-LeB" secondAttribute="bottom" constant="21" id="TdO-v6-cRJ"/>
                             <constraint firstItem="V0U-Sy-bEP" firstAttribute="width" secondItem="XZY-yg-3Eb" secondAttribute="width" id="Tp6-Wy-NgM"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="XZY-yg-3Eb" secondAttribute="bottom" constant="10" id="i5M-21-1xc"/>
@@ -72,7 +75,6 @@
                             <constraint firstItem="oV1-73-Z9b" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="102" id="sAZ-VF-xgj"/>
                             <constraint firstItem="zzp-Ve-LeB" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="zpJ-s4-SY0"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
                         <outlet property="textView" destination="zzp-Ve-LeB" id="ufe-Eu-jhX"/>
@@ -83,4 +85,12 @@
             <point key="canvasLocation" x="131.8840579710145" y="137.94642857142856"/>
         </scene>
     </scenes>
+    <resources>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>

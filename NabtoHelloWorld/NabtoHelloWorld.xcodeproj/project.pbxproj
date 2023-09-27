@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		147149C6A62F562C35CA0A18 /* Pods_NabtoHelloWorld.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4784DC9E86BDF1E545723A26 /* Pods_NabtoHelloWorld.framework */; };
+		878BACD8DC44199463FF8333 /* Pods_NabtoHelloWorld.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E0F4C1C05710E98888913A9 /* Pods_NabtoHelloWorld.framework */; };
 		D4E90682240402E30025FEF9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4E90681240402E30025FEF9 /* AppDelegate.swift */; };
 		D4E90684240402E30025FEF9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4E90683240402E30025FEF9 /* SceneDelegate.swift */; };
 		D4E90686240402E30025FEF9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4E90685240402E30025FEF9 /* ViewController.swift */; };
@@ -17,9 +17,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		0AE236B6F50BC6C0E4CB832F /* Pods-NabtoHelloWorld.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NabtoHelloWorld.debug.xcconfig"; path = "Target Support Files/Pods-NabtoHelloWorld/Pods-NabtoHelloWorld.debug.xcconfig"; sourceTree = "<group>"; };
-		4784DC9E86BDF1E545723A26 /* Pods_NabtoHelloWorld.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NabtoHelloWorld.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		58843707109DE08E0B953761 /* Pods-NabtoHelloWorld.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NabtoHelloWorld.release.xcconfig"; path = "Target Support Files/Pods-NabtoHelloWorld/Pods-NabtoHelloWorld.release.xcconfig"; sourceTree = "<group>"; };
+		3E0F4C1C05710E98888913A9 /* Pods_NabtoHelloWorld.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NabtoHelloWorld.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		813B4CE4BC5F892B86F190E3 /* Pods-NabtoHelloWorld.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NabtoHelloWorld.release.xcconfig"; path = "Target Support Files/Pods-NabtoHelloWorld/Pods-NabtoHelloWorld.release.xcconfig"; sourceTree = "<group>"; };
 		D4E9067E240402E30025FEF9 /* NabtoHelloWorld.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NabtoHelloWorld.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D4E90681240402E30025FEF9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D4E90683240402E30025FEF9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -28,6 +27,7 @@
 		D4E9068A240402E40025FEF9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D4E9068D240402E40025FEF9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D4E9068F240402E40025FEF9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E378E128B002B76BC38D459C /* Pods-NabtoHelloWorld.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NabtoHelloWorld.debug.xcconfig"; path = "Target Support Files/Pods-NabtoHelloWorld/Pods-NabtoHelloWorld.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -35,18 +35,26 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				147149C6A62F562C35CA0A18 /* Pods_NabtoHelloWorld.framework in Frameworks */,
+				878BACD8DC44199463FF8333 /* Pods_NabtoHelloWorld.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		3DE4B9A24328EA4BAA0FEF0C /* Pods */ = {
+		64DABDAA28E242A6CEB4A048 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				0AE236B6F50BC6C0E4CB832F /* Pods-NabtoHelloWorld.debug.xcconfig */,
-				58843707109DE08E0B953761 /* Pods-NabtoHelloWorld.release.xcconfig */,
+				3E0F4C1C05710E98888913A9 /* Pods_NabtoHelloWorld.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		6B0F0FB133373971D2A33602 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				E378E128B002B76BC38D459C /* Pods-NabtoHelloWorld.debug.xcconfig */,
+				813B4CE4BC5F892B86F190E3 /* Pods-NabtoHelloWorld.release.xcconfig */,
 			);
 			name = Pods;
 			path = ../Pods;
@@ -57,8 +65,8 @@
 			children = (
 				D4E90680240402E30025FEF9 /* NabtoHelloWorld */,
 				D4E9067F240402E30025FEF9 /* Products */,
-				3DE4B9A24328EA4BAA0FEF0C /* Pods */,
-				E06A8BDAE61D68606111CDEE /* Frameworks */,
+				6B0F0FB133373971D2A33602 /* Pods */,
+				64DABDAA28E242A6CEB4A048 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -84,14 +92,6 @@
 			path = NabtoHelloWorld;
 			sourceTree = "<group>";
 		};
-		E06A8BDAE61D68606111CDEE /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				4784DC9E86BDF1E545723A26 /* Pods_NabtoHelloWorld.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -99,11 +99,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D4E90692240402E40025FEF9 /* Build configuration list for PBXNativeTarget "NabtoHelloWorld" */;
 			buildPhases = (
-				3011F2E6DF8A9D6AEB35263C /* [CP] Check Pods Manifest.lock */,
+				BC4317E35FA1A1787D8E4C98 /* [CP] Check Pods Manifest.lock */,
 				D4E9067A240402E30025FEF9 /* Sources */,
 				D4E9067B240402E30025FEF9 /* Frameworks */,
 				D4E9067C240402E30025FEF9 /* Resources */,
-				D5E1BD66469E15B05F8B7836 /* [CP] Embed Pods Frameworks */,
+				7289A85BD3610EF55FCCA3EA /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -161,7 +161,24 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		3011F2E6DF8A9D6AEB35263C /* [CP] Check Pods Manifest.lock */ = {
+		7289A85BD3610EF55FCCA3EA /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-NabtoHelloWorld/Pods-NabtoHelloWorld-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-NabtoHelloWorld/Pods-NabtoHelloWorld-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-NabtoHelloWorld/Pods-NabtoHelloWorld-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BC4317E35FA1A1787D8E4C98 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -181,23 +198,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		D5E1BD66469E15B05F8B7836 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-NabtoHelloWorld/Pods-NabtoHelloWorld-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-NabtoHelloWorld/Pods-NabtoHelloWorld-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-NabtoHelloWorld/Pods-NabtoHelloWorld-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -351,7 +351,7 @@
 		};
 		D4E90693240402E40025FEF9 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 0AE236B6F50BC6C0E4CB832F /* Pods-NabtoHelloWorld.debug.xcconfig */;
+			baseConfigurationReference = E378E128B002B76BC38D459C /* Pods-NabtoHelloWorld.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -370,7 +370,7 @@
 		};
 		D4E90694240402E40025FEF9 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 58843707109DE08E0B953761 /* Pods-NabtoHelloWorld.release.xcconfig */;
+			baseConfigurationReference = 813B4CE4BC5F892B86F190E3 /* Pods-NabtoHelloWorld.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
