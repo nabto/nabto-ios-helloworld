@@ -6,6 +6,6 @@ platform :ios, '14.5'
 
 target 'NabtoHelloWorld' do
   use_frameworks!
-  pod 'NabtoClient', '~>7.3.0-rc3'
+  pod 'NabtoClient', '~>7.3.0'
 end
 
