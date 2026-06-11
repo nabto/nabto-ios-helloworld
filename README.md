@@ -2,11 +2,50 @@
 
 Swift based app that demonstrates how to use the Nabto Client SDK to do P2P RPC invocations and establish tunnels.
 
-First, if you have not installed Cocoapods, do so: `sudo gem install cocoapods`
+The project is generated with [XcodeGen](https://github.com/yonaskolb/XcodeGen) from `NabtoHelloWorld/project.yml`. The Nabto Client SDK is pulled in as a Swift Package Manager dependency.
 
-Next, run `pod install`.
+First, if you have not installed XcodeGen, do so: `brew install xcodegen`
 
-Open `NabtoHelloWorld.xcworkspace` and run the app.
+Next, generate the Xcode project:
+
+```
+cd NabtoHelloWorld && xcodegen
+```
+
+Open `NabtoHelloWorld/NabtoHelloWorld.xcodeproj` and run the app. Xcode resolves the SPM dependencies on first open.
+
+## Building from the command line
+
+To build for an iOS Simulator (e.g. iPhone 16) without code signing:
+
+```
+cd NabtoHelloWorld
+xcodebuild \
+  -project NabtoHelloWorld.xcodeproj \
+  -scheme NabtoHelloWorld \
+  -destination 'platform=iOS Simulator,name=iPhone 16' \
+  CODE_SIGNING_ALLOWED=NO \
+  build
+```
+
+To build for a physical device (requires a valid signing team configured in `project.yml`):
+
+```
+cd NabtoHelloWorld
+xcodebuild \
+  -project NabtoHelloWorld.xcodeproj \
+  -scheme NabtoHelloWorld \
+  -destination 'generic/platform=iOS' \
+  build
+```
+
+To resolve SPM dependencies without building:
+
+```
+xcodebuild -project NabtoHelloWorld.xcodeproj -resolvePackageDependencies
+```
+
+List available simulator destinations with `xcrun simctl list devices available`. Note that the `NabtoAPI.xcframework` shipped by the SPM package only contains an `arm64` simulator slice, so building for an `x86_64` (Intel Mac) simulator is not supported — use an Apple Silicon Mac or a physical device.
 
 ## Notes
 

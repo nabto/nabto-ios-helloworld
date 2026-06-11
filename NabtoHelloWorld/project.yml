@@ -1,0 +1,49 @@
+name: NabtoHelloWorld
+options:
+  bundleIdPrefix: com.nabto
+  deploymentTarget:
+    iOS: "14.5"
+  developmentLanguage: en
+
+packages:
+  NabtoClient:
+    url: https://github.com/nabto/nabto-ios-client
+    exactVersion: 8.0.0
+
+targets:
+  NabtoHelloWorld:
+    type: application
+    platform: iOS
+    sources:
+      - NabtoHelloWorld
+    info:
+      path: NabtoHelloWorld/Info.plist
+      properties:
+        LSRequiresIPhoneOS: true
+        UILaunchStoryboardName: LaunchScreen
+        UIMainStoryboardFile: Main
+        UISupportedInterfaceOrientations:
+          - UIInterfaceOrientationPortrait
+          - UIInterfaceOrientationLandscapeLeft
+          - UIInterfaceOrientationLandscapeRight
+        UISupportedInterfaceOrientations~ipad:
+          - UIInterfaceOrientationPortrait
+          - UIInterfaceOrientationPortraitUpsideDown
+          - UIInterfaceOrientationLandscapeLeft
+          - UIInterfaceOrientationLandscapeRight
+        UIApplicationSceneManifest:
+          UIApplicationSupportsMultipleScenes: false
+          UISceneConfigurations:
+            UIWindowSceneSessionRoleApplication:
+              - UISceneConfigurationName: Default Configuration
+                UISceneDelegateClassName: $(PRODUCT_MODULE_NAME).SceneDelegate
+                UISceneStoryboardFile: Main
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.nabto.NabtoHelloWorld
+        TARGETED_DEVICE_FAMILY: "1,2"
+        DEVELOPMENT_TEAM: E55K8RCV2E
+        CODE_SIGN_STYLE: Automatic
+        SWIFT_VERSION: "5.0"
+    dependencies:
+      - package: NabtoClient
