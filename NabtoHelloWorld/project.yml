@@ -42,7 +42,6 @@ targets:
       base:
         PRODUCT_BUNDLE_IDENTIFIER: com.nabto.NabtoHelloWorld
         TARGETED_DEVICE_FAMILY: "1,2"
-        DEVELOPMENT_TEAM: E55K8RCV2E
         CODE_SIGN_STYLE: Automatic
         SWIFT_VERSION: "5.0"
     dependencies:

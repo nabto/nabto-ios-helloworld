@@ -1,0 +1,29 @@
+name: CI
+
+on:
+  pull_request:
+  push:
+    branches:
+      - master
+
+jobs:
+  build:
+    runs-on: macos-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install XcodeGen
+        run: brew install xcodegen
+
+      - name: Generate Xcode project
+        working-directory: NabtoHelloWorld
+        run: xcodegen
+
+      - name: Build for iOS Simulator
+        run: |
+          xcodebuild \
+            -project NabtoHelloWorld/NabtoHelloWorld.xcodeproj \
+            -scheme NabtoHelloWorld \
+            -destination 'platform=iOS Simulator,name=iPhone 16' \
+            CODE_SIGNING_ALLOWED=NO \
+            build
