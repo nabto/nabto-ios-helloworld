@@ -10,7 +10,7 @@ jobs:
   build:
     runs-on: macos-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
 
       - name: Install XcodeGen
         run: brew install xcodegen
@@ -24,6 +24,7 @@ jobs:
           xcodebuild \
             -project NabtoHelloWorld/NabtoHelloWorld.xcodeproj \
             -scheme NabtoHelloWorld \
-            -destination 'platform=iOS Simulator,name=iPhone 16' \
+            -destination 'generic/platform=iOS Simulator' \
+            ARCHS=arm64 \
             CODE_SIGNING_ALLOWED=NO \
             build
